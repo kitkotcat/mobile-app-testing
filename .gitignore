@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Third-party Android application packages
+*.apk
+*.aab
+
+# Large screen recordings
+*.webm
+*.mp4
+*.mov
+
+# Temporary files
+*.tmp
+*.swp
