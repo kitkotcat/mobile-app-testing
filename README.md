@@ -9,6 +9,7 @@ The repository contains practical testing artifacts, including test checklists, 
 | Project | Testing areas | Main artifact |
 |---|---|---|
 | [Android Game Testing](android-game/README.md) | Functional testing, gameplay, advertisements, settings, Android lifecycle, UI and basic Logcat analysis | [Excel QA report](android-game/artifacts/android-game-test-report.xlsx) |
+| [Skillcinema Mobile Application Testing](skillcinema/README.md) | Functional, UI/UX, negative, network and performance testing | [Excel QA report](skillcinema/artifacts/skillcinema-mobile-testing-report.xlsx) |
 
 ## Skills demonstrated
 
@@ -30,6 +31,12 @@ mobile-app-testing/
 ├── android-game/
 │   ├── artifacts/
 │   │   └── android-game-test-report.xlsx
+│   ├── evidence/
+│   │   └── README.md
+│   └── README.md
+├── skillcinema/
+│   ├── artifacts/
+│   │   └── skillcinema-mobile-testing-report.xlsx
 │   ├── evidence/
 │   │   └── README.md
 │   └── README.md
