@@ -1,132 +1,132 @@
-# Android Game Testing
+# Тестирование Android-игры
 
-Independent black-box testing of the Android game **Spider Hero 2 / Spider Fighter 3D**.
+Независимое black-box тестирование Android-игры **Spider Hero 2 / Spider Fighter 3D**.
 
-The project demonstrates manual testing of gameplay, advertisements, settings, shop functionality, Android lifecycle behaviour and selected technical events in Logcat.
+Проект демонстрирует ручное тестирование gameplay, рекламы, настроек, магазина, Android lifecycle и отдельных технических событий в Logcat.
 
-## Application under test
+## Объект тестирования
 
-| Parameter | Value |
+| Параметр | Значение |
 |---|---|
-| Application | Spider Hero 2 / Spider Fighter 3D |
+| Приложение | Spider Hero 2 / Spider Fighter 3D |
 | Build | `game: 0.0.1.1686131318` |
 | Package | `com.starplay.spider.fighter3d` |
 | Activity | `com.superlevel.fighting.GameActivity` |
-| Test date | 2026-06-09 |
-| Test approach | Manual black-box testing |
+| Дата тестирования | 2026-06-09 |
+| Подход | Ручное black-box тестирование |
 
-## Test environment
+## Тестовое окружение
 
-| Parameter | Value |
+| Параметр | Значение |
 |---|---|
 | Device | Pixel 4 Android Studio Emulator |
 | Android | API 36 |
 | Emulator | 36.3.10-14472402 |
 | CPU / ABI | x86_64 |
 | RAM | 2048 MB |
-| Screen | 1080 × 2280, density 440 |
+| Экран | 1080 × 2280, density 440 |
 | Host OS | macOS 26.4 |
-| Network | Wi-Fi / online connection |
+| Network | Wi-Fi / online |
 
-## Test scope
+## Область тестирования
 
-The testing covered:
+Проверялись:
 
-- application installation and launch;
-- build version verification;
-- pause and resume behaviour;
-- repeated pause/resume actions;
-- fullscreen advertisement flow;
-- restart flow after character death;
-- settings and sound controls;
-- language selection and persistence;
-- graphics quality settings;
-- Restore Purchases behaviour;
-- Shop navigation;
-- gameplay and enemy behaviour;
-- map boundaries and character physics;
-- Android Back and application lifecycle;
-- basic Logcat analysis.
+- установка и запуск приложения;
+- версия build;
+- pause / resume;
+- повторные pause / resume;
+- fullscreen-реклама;
+- restart после смерти персонажа;
+- настройки и управление звуком;
+- выбор и сохранение языка;
+- настройки качества графики;
+- Restore Purchases;
+- переход в Shop;
+- gameplay и поведение врагов;
+- границы карты и физика персонажа;
+- Android Back и application lifecycle;
+- базовый анализ Logcat.
 
-## Test results
+## Результаты
 
-| Metric | Result |
+| Метрика | Результат |
 |---|---:|
-| Total checklist items | 19 |
+| Пунктов чек-листа | 19 |
 | Passed | 8 |
 | Passed with note | 1 |
 | Failed | 9 |
 | Need retest | 1 |
-| Documented bug reports | 10 |
+| Баг-репортов | 10 |
 | Open bugs | 9 |
 | Need retest bugs | 1 |
 
-## Main findings
+## Основные дефекты
 
 ### Blocker
 
-- `BUG-ADS-001` — the user is blocked on a fullscreen advertisement without an available way to return to the game.
+- `BUG-ADS-001` — пользователь блокируется на fullscreen-рекламе без доступного способа вернуться в игру.
 
-### High-priority defects
+### High priority
 
-- `BUG-ADS-002` — advertisement interrupts the restart flow after character death;
-- `BUG-SHOP-001` — the Shop button does not open the store;
-- `BUG-GAME-002` — armed enemies aim at the player but do not shoot;
-- `BUG-UI-001` — the advertisement control opens a feedback menu instead of closing the advertisement.
+- `BUG-ADS-002` — реклама прерывает restart flow после смерти персонажа;
+- `BUG-SHOP-001` — кнопка Shop не открывает магазин;
+- `BUG-GAME-002` — вооружённые враги целятся в игрока, но не стреляют;
+- `BUG-UI-001` — элемент управления рекламой открывает feedback menu вместо закрытия рекламы.
 
-### Additional findings
+### Дополнительные находки
 
-- Restore Purchases provides no visible result or feedback;
-- selected interface language is not applied;
-- Low, Medium and High graphics settings show no visible difference;
-- build information is difficult to read;
-- the character was observed falling outside the playable area and becoming stuck in empty space.
+- Restore Purchases не даёт видимого результата или обратной связи;
+- выбранный язык интерфейса не применяется;
+- Low / Medium / High graphics визуально не отличаются;
+- информация о build плохо читается;
+- персонаж один раз вышел за пределы игровой области и застрял в пустом пространстве.
 
-The map/physics issue is marked **Need retest** because it was observed once and requires additional reproduction attempts and technical logs.
+Проблема с картой/физикой отмечена как **Need retest**, потому что воспроизвелась один раз и требует дополнительных попыток и технических логов.
 
-## Tools
+## Инструменты
 
 - Android Studio Emulator;
 - ADB;
 - Logcat;
 - Android screen recorder;
 - screenshots;
-- manual test checklist;
-- structured bug reports.
+- ручной чек-лист;
+- структурированные баг-репорты.
 
-## Test artifacts
+## Тестовые артефакты
 
-The complete report is available here:
+Полный отчёт:
 
 - [Android game QA report](artifacts/android-game-test-report.xlsx)
 
-The workbook contains:
+В workbook входят:
 
-- project summary;
-- 10 bug reports;
-- 19 checklist items;
-- technical evidence register;
-- environment information;
-- severity, priority and status legend.
+- сводка проекта;
+- 10 баг-репортов;
+- 19 пунктов чек-листа;
+- реестр technical evidence;
+- информация об окружении;
+- Severity, Priority и Status legend.
 
 ## Evidence
 
-Evidence references and publication rules are documented in:
+Правила публикации evidence описаны здесь:
 
-- [Evidence overview](evidence/README.md)
+- [Описание evidence](evidence/README.md)
 
-Large screen recordings are stored externally and are not committed directly to this repository.
+Крупные screen recordings хранятся отдельно и не добавляются в Git.
 
-## Limitations
+## Ограничения
 
-- Testing was performed on an Android emulator, not on a physical device.
-- Server-side implementation and application source code were unavailable.
-- Some monetization behaviour may depend on third-party advertising or billing services.
-- The project does not include the tested APK.
-- Expected behaviour is based on observable product logic and standard mobile usability expectations where formal requirements were unavailable.
+- Тестирование проводилось на Android Emulator, а не на физическом устройстве.
+- Server-side implementation и source code недоступны.
+- Часть monetization behaviour зависит от сторонних advertising / billing services.
+- APK тестируемого приложения в репозитории не публикуется.
+- При отсутствии формальных требований Expected Result определялся по наблюдаемой продуктовой логике и стандартным mobile usability expectations.
 
-## Disclaimer
+## Дисклеймер
 
-This is an independent QA portfolio project.
+Это независимый QA portfolio project.
 
-The tested application, game assets, product names and trademarks belong to their respective owners. This repository does not distribute the application or its proprietary source code.
+Тестируемое приложение, игровые материалы, названия и товарные знаки принадлежат соответствующим владельцам. Репозиторий не распространяет приложение или его proprietary source code.

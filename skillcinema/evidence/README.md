@@ -1,19 +1,17 @@
-# Skillcinema Test Evidence
+# Evidence по тестированию Skillcinema
 
-This directory is intended for sanitized evidence supporting the Skillcinema mobile testing report.
+Папка предназначена для обезличенных доказательств, связанных с отчётом по тестированию мобильного приложения Skillcinema.
 
-## Evidence types
+## Что можно добавлять
 
-The project may include:
+- screenshots воспроизведённых дефектов;
+- screenshots Android Network Inspector;
+- screenshots тестового окружения Emulator;
+- изображения сравнения с дизайном;
+- короткие фрагменты Logcat;
+- screen recordings с воспроизводимым поведением.
 
-- screenshots of reproduced defects;
-- Android Network Inspector screenshots;
-- emulator environment screenshots;
-- design comparison images;
-- short Logcat excerpts;
-- screen recordings demonstrating reproducible behaviour.
-
-## Recommended naming convention
+## Рекомендуемые названия файлов
 
 - `SK-BUG-001-onboarding-not-displayed.png`
 - `SK-BUG-002-search-request-per-character.png`
@@ -23,29 +21,29 @@ The project may include:
 - `SK-BUG-006-filter-label-mismatch.png`
 - `SK-BUG-007-button-radius-mismatch.png`
 
-## Publication checks
+## Проверка перед публикацией
 
-Before evidence is committed, it must be checked for:
+Необходимо убедиться, что evidence не содержит:
 
-- email addresses and passwords;
+- email и passwords;
 - authentication tokens;
 - API keys;
 - device identifiers;
-- personal information;
-- unrelated applications or browser tabs;
+- персональные данные;
+- посторонние приложения или browser tabs;
 - private URLs;
-- confidential company or course data.
+- конфиденциальные материалы компании или курса.
 
-## Repository rules
+## Правила репозитория
 
-- Third-party APK files are not published.
-- Large recordings are stored externally.
-- Screenshots should be cropped to the relevant application area.
-- Sensitive values must be hidden or replaced with placeholders.
-- Each evidence file should reference the related Bug ID.
+- Сторонние APK не публикуются.
+- Крупные recordings хранятся отдельно.
+- Screenshots обрезаются до значимой области.
+- Sensitive values скрываются или заменяются placeholders.
+- Каждый evidence-файл должен ссылаться на соответствующий Bug ID.
 
-## Current status
+## Текущий статус
 
-The structured test cases and bug reports are included in the Excel report.
+Структурированные тест-кейсы и баг-репорты находятся в Excel-отчёте.
 
-Additional sanitized screenshots may be added after their contents and relevance are verified.
+Дополнительные обезличенные screenshots могут быть добавлены после проверки содержимого и релевантности.
