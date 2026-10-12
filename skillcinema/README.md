@@ -1,136 +1,136 @@
-# Skillcinema Mobile Application Testing
+# Тестирование мобильного приложения Skillcinema
 
-Manual black-box testing of the **Skillcinema Android application**, performed as an educational QA project.
+Ручное black-box тестирование **Android-приложения Skillcinema**, выполненное как учебный QA-проект.
 
-The project covers functional testing, UI/UX validation, negative scenarios, network behaviour, performance observations and comparison with design requirements.
+Проект охватывает функциональное тестирование, UI/UX, негативные сценарии, network behaviour, performance observations и сравнение с требованиями дизайна.
 
-## Application under test
+## Объект тестирования
 
-| Parameter | Value |
+| Параметр | Значение |
 |---|---|
-| Application | Skillcinema |
-| Platform | Android |
-| Test approach | Manual black-box testing |
-| Test environments | Android Studio Emulator |
-| Physical device | Not used |
-| Application version | Not recorded in the source artifacts |
+| Приложение | Skillcinema |
+| Платформа | Android |
+| Подход | Ручное black-box тестирование |
+| Окружение | Android Studio Emulator |
+| Физическое устройство | Не использовалось |
+| Версия приложения | Не зафиксирована в исходных артефактах |
 
-## Test environments
+## Тестовые окружения
 
-| Environment | Device | Android version | Scope |
+| Окружение | Device | Android | Область проверки |
 |---|---|---|---|
-| `ENV-01` | Medium Phone Emulator | API 36.1 | UX and design validation |
-| `ENV-02` | Pixel 4 Emulator | API 36 | Functional, UI, network and performance checks |
+| `ENV-01` | Medium Phone Emulator | API 36.1 | UX и проверка дизайна |
+| `ENV-02` | Pixel 4 Emulator | API 36 | Functional, UI, network и performance checks |
 
-## Test scope
+## Область тестирования
 
-The testing covered:
+Проверялись:
 
-- application launch and splash screen;
+- запуск приложения и splash screen;
 - onboarding;
-- Home screen and movie collections;
-- movie and series details;
-- Search and filters;
-- Favorites and viewing status;
-- custom user collections;
-- Profile and viewing history;
-- image gallery;
-- network error handling;
+- Home screen и подборки фильмов;
+- карточки фильмов и сериалов;
+- Search и filters;
+- Favorites и viewing status;
+- пользовательские коллекции;
+- Profile и история просмотров;
+- галерея изображений;
+- обработка network errors;
 - loading indicators;
-- device rotation;
-- basic performance observations;
-- UI comparison with design requirements.
+- поворот устройства;
+- базовые performance observations;
+- сравнение UI с design requirements.
 
-## Test documentation
+## Тестовая документация
 
-| Metric | Result |
+| Метрика | Результат |
 |---|---:|
 | UI / Functional test cases | 63 |
 | UX test cases | 12 |
-| Total source cases | 75 |
-| Consolidated unique scenarios | 41 |
-| Passed consolidated scenarios | 34 |
-| Failed consolidated scenarios | 6 |
+| Всего исходных кейсов | 75 |
+| Уникальных объединённых сценариев | 41 |
+| Passed | 34 |
+| Failed | 6 |
 | Needs clarification | 1 |
-| Documented defects | 7 |
+| Задокументированных дефектов | 7 |
 
-Repeated source scenarios were consolidated while preserving their original test-case IDs for traceability.
+Повторяющиеся исходные сценарии объединены с сохранением первоначальных Test Case ID для трассировки.
 
-## Main findings
+## Основные дефекты
 
-### Functional defects
+### Functional
 
-- the onboarding screen was not displayed during one documented execution;
-- the Related Movies block was missing on a series page;
-- not all required image gallery categories were displayed;
-- the loading indicator remained visible after a network error.
+- onboarding не отображался в одном из зафиксированных прогонов;
+- отсутствовал блок Related Movies на странице сериала;
+- отображались не все требуемые категории галереи;
+- loading indicator оставался видимым после network error.
 
-### Search and performance
+### Search и performance
 
-- an API request was sent after every entered character instead of waiting for a pause in user input.
+- API request отправлялся после каждого введённого символа вместо ожидания паузы во вводе.
 
-### UI defects
+### UI
 
-- the filter label did not match the design requirements;
-- the Select button corner radius differed from the design mockup.
+- label фильтра не соответствовал design requirements;
+- corner radius кнопки Select отличался от макета.
 
-## Onboarding result clarification
+## Уточнение по onboarding
 
-The source documents contain conflicting onboarding results:
+В исходной документации есть противоречивые результаты:
 
-- some test cases record the onboarding flow as passed;
-- another execution records that onboarding was not displayed.
+- часть тест-кейсов фиксирует onboarding как Passed;
+- в другом прогоне onboarding не отображался.
 
-The consolidated scenario is therefore marked **Needs clarification**.
+Поэтому объединённый сценарий отмечен **Needs clarification**.
 
-A controlled retest on a documented application build is required before assigning a final result.
+Для итогового статуса нужен контролируемый retest на зафиксированной версии приложения.
 
-## Tools and techniques
+## Инструменты и техники
 
 - Android Studio Emulator;
 - Android Network Inspector;
-- manual functional testing;
+- ручное functional testing;
 - exploratory testing;
-- positive and negative testing;
-- UI and UX validation;
-- design comparison;
-- test-case and bug-report preparation;
-- severity and priority assessment;
-- traceability between test cases and defects.
+- positive / negative testing;
+- UI / UX validation;
+- сравнение с design mockup;
+- тест-кейсы и баг-репорты;
+- Severity / Priority assessment;
+- трассировка между тест-кейсами и дефектами.
 
-## Test artifact
+## Тестовый артефакт
 
-The complete consolidated report is available here:
+Полный отчёт:
 
 - [Skillcinema Mobile Testing Report](artifacts/skillcinema-mobile-testing-report.xlsx)
 
-The workbook contains:
+Workbook содержит:
 
-- project summary;
-- consolidated test scenarios;
-- 63 original UI/Functional cases;
-- 12 original UX cases;
-- 7 structured bug reports;
-- test environment information;
-- limitations and data-quality notes.
+- сводку проекта;
+- объединённые тестовые сценарии;
+- 63 исходных UI/Functional case;
+- 12 UX case;
+- 7 структурированных баг-репортов;
+- сведения об окружении;
+- ограничения и data-quality notes.
 
 ## Evidence
 
-Evidence handling and publication rules are described here:
+Правила публикации evidence:
 
-- [Evidence overview](evidence/README.md)
+- [Описание evidence](evidence/README.md)
 
-## Limitations
+## Ограничения
 
-- Testing was performed on Android emulators rather than physical devices.
-- The exact application version and execution dates were not recorded in the source documents.
-- Application source code and server-side implementation were unavailable.
-- Formal API documentation was unavailable.
-- Some expected results were based on course requirements and design mockups.
-- The tested APK is not distributed in this repository.
+- Тестирование проводилось на Android Emulator, а не на физических устройствах.
+- Точная версия приложения и даты отдельных прогонов не зафиксированы в исходных документах.
+- Source code и server-side implementation недоступны.
+- Формальная API documentation отсутствовала.
+- Часть Expected Result основана на требованиях курса и design mockups.
+- APK приложения в репозитории не распространяется.
 
-## Disclaimer
+## Дисклеймер
 
-This is an independent educational QA portfolio project.
+Это независимый учебный QA portfolio project.
 
-The application name, design materials and related assets belong to their respective owners. The repository does not contain proprietary source code or third-party application binaries.
+Название приложения, design materials и связанные assets принадлежат соответствующим владельцам. Репозиторий не содержит proprietary source code или сторонние application binaries.

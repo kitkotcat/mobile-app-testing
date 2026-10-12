@@ -1,30 +1,32 @@
-# Mobile App Testing Portfolio
+# Тестирование мобильных приложений Android
 
-Manual QA portfolio focused on Android mobile application testing.
+Портфолио по ручному тестированию Android-приложений.
 
-The repository contains practical testing artifacts, including test checklists, bug reports, test summaries, environment details, and technical evidence collected with Android testing tools.
+В репозитории собраны практические QA-артефакты: чек-листы, тест-кейсы, баг-репорты, отчёты о тестировании, описание окружения и технические evidence, полученные с помощью Android-инструментов.
 
-## Projects
+## Проекты
 
-| Project | Testing areas | Main artifact |
+| Проект | Что проверялось | Основной артефакт |
 |---|---|---|
-| [Android Game Testing](android-game/README.md) | Functional testing, gameplay, advertisements, settings, Android lifecycle, UI and basic Logcat analysis | [Excel QA report](android-game/artifacts/android-game-test-report.xlsx) |
-| [Skillcinema Mobile Application Testing](skillcinema/README.md) | Functional, UI/UX, negative, network and performance testing | [Excel QA report](skillcinema/artifacts/skillcinema-mobile-testing-report.xlsx) |
+| [Тестирование Android-игры](android-game/README.md) | функциональность, gameplay, реклама, настройки, Android lifecycle, UI, базовый анализ Logcat | [Excel QA report](android-game/artifacts/android-game-test-report.xlsx) |
+| [Тестирование Skillcinema](skillcinema/README.md) | functional, UI/UX, negative, network и performance testing | [Excel QA report](skillcinema/artifacts/skillcinema-mobile-testing-report.xlsx) |
 
-## Skills demonstrated
+## Навыки, показанные в проекте
 
-- manual functional and exploratory testing;
-- Android application testing;
-- smoke and regression checks;
-- gameplay and application lifecycle testing;
-- advertisement and monetization flow testing;
-- test checklist creation;
-- bug reporting with severity and priority;
-- expected and actual result documentation;
-- Android Studio Emulator, ADB and Logcat usage;
-- technical evidence collection and analysis.
+- ручное функциональное и исследовательское тестирование;
+- тестирование Android-приложений;
+- smoke и regression checks;
+- проверка application lifecycle;
+- тестирование рекламы и monetization flow;
+- создание чек-листов и тест-кейсов;
+- оформление баг-репортов с Severity и Priority;
+- фиксация Expected / Actual Result;
+- Android Studio Emulator;
+- ADB;
+- Logcat;
+- сбор и анализ технических evidence.
 
-## Repository structure
+## Структура репозитория
 
 ```text
 mobile-app-testing/
@@ -42,13 +44,15 @@ mobile-app-testing/
 │   └── README.md
 ├── .gitignore
 └── README.md
-Notes
+```
 
-The applications tested in this repository are third-party products used only for educational and portfolio purposes.
+## Примечание
 
-No APK files, proprietary source code, user credentials, or confidential company information are stored in the repository.
+Тестируемые приложения являются сторонними продуктами и использовались только в учебных и портфолио-целях.
 
-Author
+Репозиторий не содержит APK-файлы, proprietary source code, пользовательские credentials или конфиденциальные данные компаний.
 
-Ekaterina Peshkun
-Junior Manual QA Engineer
+## Автор
+
+**Екатерина Пешкун**
+Junior QA Engineer

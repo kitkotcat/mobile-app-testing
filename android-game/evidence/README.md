@@ -1,43 +1,43 @@
-# Technical Evidence
+# Технические evidence
 
-This directory is intended for technical evidence supporting the Android game test report.
+Папка предназначена для технических доказательств, связанных с отчётом по тестированию Android-игры.
 
-## Evidence types
+## Типы evidence
 
-The Excel report references the following evidence:
+В Excel-отчёте используются ссылки на:
 
-- Logcat excerpts;
+- фрагменты Logcat;
 - screenshots;
 - Android screen recordings;
-- package and activity information obtained through ADB;
-- environment and build information.
+- package и activity information, полученные через ADB;
+- сведения об окружении и build.
 
-## Evidence register
+## Реестр evidence
 
-| Evidence ID | Type | Related defects |
+| Evidence ID | Тип | Связанные дефекты |
 |---|---|---|
 | `EVD-001` | Logcat | `BUG-ADS-001`, `BUG-ADS-002` |
-| `EVD-002` | Additional Logcat | `BUG-ADS-001`, `BUG-ADS-002` |
+| `EVD-002` | Дополнительный Logcat | `BUG-ADS-001`, `BUG-ADS-002` |
 | `EVD-003` | Logcat | `BUG-SET-001` |
 | `EVD-004` | Screenshots | `BUG-ADS-001`, `BUG-UI-001` |
 | `EVD-005` | Screen recording | `BUG-ADS-001`, `BUG-GAME-001` |
 
-## Publication rules
+## Проверка перед публикацией
 
-Before evidence is committed, it must be checked for:
+Перед добавлением evidence необходимо проверить отсутствие:
 
-- credentials and tokens;
-- personal email addresses;
+- credentials и tokens;
+- персональных email;
 - device identifiers;
-- unrelated personal information;
-- confidential application or company data.
+- посторонней персональной информации;
+- конфиденциальных данных приложения или компании.
 
-Large videos are stored externally to avoid unnecessary repository size.
+Крупные видео хранятся отдельно, чтобы не увеличивать размер репозитория.
 
-APK files are not published because they are third-party application binaries.
+APK не публикуются, так как являются сторонними application binaries.
 
-## Current status
+## Текущий статус
 
-Evidence names and external references are included in the Excel report.
+Названия evidence и внешние ссылки указаны в Excel-отчёте.
 
-Small sanitized screenshots and Logcat excerpts may be added to this directory later.
+Небольшие обезличенные screenshots и фрагменты Logcat могут быть добавлены позже после проверки содержимого.
